@@ -14,7 +14,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
-	private static String[] PUBLIC_MATCHERS = {"/h2-console/**"};
+	private static String[] PUBLIC_MATCHERS = {"/h2-console/**", "/console/**"};
 	
 	//metodo que define as configurações do spring security
 	protected void configure(HttpSecurity http) throws Exception{
