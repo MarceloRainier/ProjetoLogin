@@ -21,7 +21,13 @@
 </head>
 
 <body class="text-center">
-	<form th:object="${aluno}" th:action="@{/validar}" method="POST" class="form-signin">
+<button onclick="document.getElementById('id01').style.display='block'" style="width: auto;">Login</button>
+<div id="id01" class="modal">
+	<form th:object="${aluno}" th:action="@{/validar}" method="POST" class="modal-content animate">
+	<div class="imgcontainer">
+	<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+	<img src="img_avatar2.png" alt="Avatar" class="avatar">
+	</div>
 		<img class="mb-4" src="./paginaLogin_files/bootstrap-solid.svg" alt=""
 			width="72" height="72">
 		<h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
@@ -36,10 +42,11 @@
 				Lembrar de mim
 			</label>
 		</div>
-		<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+		
+		<!--  <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>-->
 		<p class="mt-5 mb-3 text-muted">© 2021</p>
 	</form>
-
+</div>
 
 </body>
 </html>
